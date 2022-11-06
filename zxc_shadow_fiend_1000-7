@@ -1,0 +1,13 @@
+from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+from spike.control import wait_for_seconds, wait_until, Timer
+from math import *
+
+hub = PrimeHub()  
+jopa=MotorPair('E','D')
+sus=MotorPair('A','B')
+sus.move(200,'cm',0,-10000)
+zxc=ColorCensor('C')
+ghoul=zxc.get_distance_cm()
+if ghoul<15:
+    jopa.move(1,'обороты',0,50)
+    
